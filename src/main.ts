@@ -16,10 +16,10 @@ document.body.innerHTML = `
 `;
 
 // Add click handler
-const button = document.getElementById("increment")!;
+const button = document.getElementById("increment")! as HTMLButtonElement;
 const counterElement = document.getElementById("counter")!;
 
-button.addEventListener("click", (button) => {
-  // This looks like to a good place to add some logic!
-  console.log("I have these thingies:", button, counterElement, counter++);
+button.addEventListener("click", () => {
+  counter++;
+  console.log("I have these thingies:", button, counterElement, counter);
 });
